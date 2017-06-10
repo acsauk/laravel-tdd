@@ -32,20 +32,25 @@ class ViewConcertListingTest extends TestCase
 
     // Act
       // View concert Listing
-    $this->visit('/concerts/'.$concert->id);
+    // $this->visit('/concerts/'.$concert->id);
+
+    $this->browse(function ($browser) {
+            $browser->visit("/concerts/.$concert->id'")
+                    -> assertSee('Latest Transactions');
+        });
 
     // Assert
       // See concert details
-      $this->see('The Red Chord');
-      $this->see('with Animosity and Lethargy');
-      $this->see('December 13, 2016 8:00pm');
-      $this->see('8:00pm');
-      $this->see('$32.50');
-      $this->see('The Mosh Pit');
-      $this->see('123 Test Avenue');
-      $this->see('Birmingham');
-      $this->see('West Midlands');
-      $this->see('B1 3DB');
-      $this->see('For tickets, call (0121) 688 1477');
+    $this->see('The Red Chord');
+    $this->see('with Animosity and Lethargy');
+    $this->see('December 13, 2016 8:00pm');
+    $this->see('8:00pm');
+    $this->see('$32.50');
+    $this->see('The Mosh Pit');
+    $this->see('123 Test Avenue');
+    $this->see('Birmingham');
+    $this->see('West Midlands');
+    $this->see('B1 3DB');
+    $this->see('For tickets, call (0121) 688 1477');
   }
 }
