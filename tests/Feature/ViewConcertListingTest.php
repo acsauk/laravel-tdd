@@ -11,6 +11,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ViewConcertListingTest extends TestCase
 {
+  use DatabaseMigrations;
   /** @test */
   function user_can_view_a_concert_listing()
   {
