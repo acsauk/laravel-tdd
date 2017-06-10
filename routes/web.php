@@ -11,4 +11,4 @@
 |
 */
 
-// Route::get('/concerts/{id}', 'ConcertsController@show');
+Route::get('/concerts/{id}', 'ConcertsController@show');
