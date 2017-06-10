@@ -33,25 +33,21 @@ class ViewConcertListingTest extends DuskTestCase
 
     // Act
       // View concert Listing
-    // $this->visit('/concerts/'.$concert->id);
-
-    $this->browse(function ($browser) {
-            $browser->visit("/concerts/.$concert->id'")
-                    -> assertSee('Latest Transactions');
+    $this->browse(function ($browser) use ($concert) {
+            $browser->visit('/concerts/'.$concert->id)
+            -> assertSee('The Red Chord')
+            -> assertSee('with Animosity and Lethargy')
+            -> assertSee('December 13, 2016 8:00pm')
+            -> assertSee('8:00pm')
+            -> assertSee('$32.50')
+            -> assertSee('The Mosh Pit')
+            -> assertSee('123 Test Avenue')
+            -> assertSee('Birmingham')
+            -> assertSee('West Midlands')
+            -> assertSee('B1 3DB')
+            -> assertSee('For tickets, call (0121) 688 1477');
         });
 
-    // Assert
-      // See concert details
-    $this->see('The Red Chord');
-    $this->see('with Animosity and Lethargy');
-    $this->see('December 13, 2016 8:00pm');
-    $this->see('8:00pm');
-    $this->see('$32.50');
-    $this->see('The Mosh Pit');
-    $this->see('123 Test Avenue');
-    $this->see('Birmingham');
-    $this->see('West Midlands');
-    $this->see('B1 3DB');
-    $this->see('For tickets, call (0121) 688 1477');
+
   }
 }
