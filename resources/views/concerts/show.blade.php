@@ -1,1 +1,1 @@
-<h1>{{ $concerts->title}}</h1>
+<h1>{{ $concert->title}}</h1>
