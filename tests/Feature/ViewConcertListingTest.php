@@ -4,12 +4,12 @@ namespace Tests\Feature;
 
 use App\Concert;
 use Carbon\Carbon;
-use Tests\TestCase;
+use Tests\BrowserKitTestCase;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ViewConcertListingTest extends TestCase
+class ViewConcertListingTest extends BrowserKitTestCase
 {
   use DatabaseMigrations;
   /** @test */
