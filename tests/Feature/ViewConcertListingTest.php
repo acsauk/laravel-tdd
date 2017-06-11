@@ -40,7 +40,7 @@ class ViewConcertListingTest extends BrowserKitTestCase
 
     $this->see('The Red Chord');
     $this->see('with Animosity and Lethargy');
-    $this->see('December 13, 2016 8:00pm');
+    $this->see('December 13, 2016');
     $this->see('8:00pm');
     $this->see('$32.50');
     $this->see('The Mosh Pit');
