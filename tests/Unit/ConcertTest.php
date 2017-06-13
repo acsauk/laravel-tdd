@@ -19,7 +19,7 @@ class ConcertTest extends BrowserKitTestCase
 
     {
         // Arrange - create a concert with a known date
-        $concert = Concert::create([
+        $concert = factory(Concert::class)->create([
           'date' => Carbon::parse('2017-06-29 8:00pm')
         ]);
 
