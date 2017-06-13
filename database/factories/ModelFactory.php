@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -35,5 +37,5 @@ $factory->define(App\Concert::class, function (Faker\Generator $faker) {
     'county' => 'West Midlands',
     'post_code' => 'B1 3DB',
     'additional_information' => 'Some fake additional info'
-  ]
+  ];
 });
